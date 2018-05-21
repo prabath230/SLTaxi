@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "328542351801",
+    "firebase_url": "https://sltaxi-9a13b.firebaseio.com",
+    "project_id": "sltaxi-9a13b",
+    "storage_bucket": "sltaxi-9a13b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328542351801:android:2363e9367b0d017d",
+        "android_client_info": {
+          "package_name": "com.example.isuru.sltaxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328542351801-m2r06oe9768k4k92uelfsfrte4ka4pj5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.isuru.sltaxi",
+            "certificate_hash": "4029e309483a5aa866e450b1fed6299d63660064"
+          }
+        },
+        {
+          "client_id": "328542351801-jhkp8vs98t3chodhur0hus7p2mu8jld5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALPbnBHdtcefJp1w3zf5aZIVPCf5KBuR8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328542351801-jhkp8vs98t3chodhur0hus7p2mu8jld5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
