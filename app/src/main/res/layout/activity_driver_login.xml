@@ -7,7 +7,7 @@
     tools:context=".DriverLoginActivity">
 
     <Button
-        android:id="@+id/btndrregi"
+        android:id="@+id/Driverregi_btn"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -17,26 +17,23 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Driverregister_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="103dp"
+        android:layout_marginBottom="125dp"
         android:text="IF don't have accunt.."
         android:textColor="#97041d"
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Driver_status"
         android:layout_width="277dp"
         android:layout_height="82dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
         android:text="Driver Login"
         android:textSize="50dp"
         tools:layout_editor_absoluteX="57dp"
@@ -57,21 +54,19 @@
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="235dp"
-        android:hint="password..."
+        android:layout_centerInParent="true"
         android:ems="10"
+        android:hint="password..."
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btndrlog"
+        android:id="@+id/Driverlog_btn"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="160dp"
-        android:textSize="20dp"
-        android:text="Login" />
+        android:layout_marginBottom="170dp"
+        android:text="Login"
+        android:textSize="20dp" />
 
 </RelativeLayout>

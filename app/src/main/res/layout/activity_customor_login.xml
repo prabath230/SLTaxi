@@ -7,7 +7,7 @@
     tools:context=".CustomorLoginActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/customorlog_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -18,7 +18,7 @@
         android:textSize="20dp" />
 
     <Button
-        android:id="@+id/btncuslog"
+        android:id="@+id/customorlog_btn"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -28,7 +28,7 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/customor_status"
         android:layout_width="270dp"
         android:layout_height="82dp"
         android:layout_marginBottom="50dp"
@@ -63,7 +63,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btncusregi"
+        android:id="@+id/customorreg_btn"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
