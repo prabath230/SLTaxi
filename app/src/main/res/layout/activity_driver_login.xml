@@ -40,7 +40,7 @@
         tools:layout_editor_absoluteY="19dp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/driver_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -51,7 +51,7 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/driver_pw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

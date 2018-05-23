@@ -32,7 +32,7 @@ public class DriverLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Driverlogbtn.setVisibility(View.INVISIBLE);
                 Driverregbtn.setVisibility(View.INVISIBLE);
-                Driverstatus.setText("Register Customer");
+                Driverstatus.setText("Register Driver");
                 Driverregbtn.setVisibility(View.VISIBLE);
                 Driverregbtn.setEnabled(true);
 
