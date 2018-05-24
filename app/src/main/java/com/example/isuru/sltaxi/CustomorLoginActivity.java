@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class CustomorLoginActivity extends AppCompatActivity {
@@ -12,6 +13,8 @@ public class CustomorLoginActivity extends AppCompatActivity {
     private Button customorregbtn;
     private TextView customorstatus;
     private TextView customorloglink;
+    private EditText customeremail;
+    private EditText customorpw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,8 @@ public class CustomorLoginActivity extends AppCompatActivity {
         customorregbtn = findViewById(R.id.customorreg_btn);
         customorstatus = findViewById(R.id.customor_status);
         customorloglink = findViewById(R.id.customorlog_link);
+        customeremail = findViewById(R.id.customer_email);
+        customorpw = findViewById(R.id.customor_pw);
 
         customorregbtn.setVisibility(View.INVISIBLE);
         customorregbtn.setEnabled(false);
