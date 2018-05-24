@@ -1,5 +1,6 @@
 package com.example.isuru.sltaxi;
 
+import android.app.ProgressDialog;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class DriverLoginActivity extends AppCompatActivity {
     private EditText driveremail;
     private EditText driverpw;
     private FirebaseAuth mAuth;
+    private ProgressDialog processbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class DriverLoginActivity extends AppCompatActivity {
 
         driveremail = findViewById(R.id.driver_email);
         driverpw = findViewById(R.id.driver_pw);
+
+        processbar = new ProgressDialog(this);
 
         Driverregbtn.setVisibility(View.INVISIBLE);
         Driverregbtn.setEnabled(false);
@@ -84,6 +88,10 @@ public class DriverLoginActivity extends AppCompatActivity {
 
         }
         else {
+
+            processbar.setTitle("Driver Registration");
+            processbar.setMessage("Please Wait we are Registering You..");
+            processbar.show();
 
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
