@@ -73,6 +73,13 @@ public class DriverLoginActivity extends AppCompatActivity {
             }
         });
 
+        Driverlogbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
+
     }
 
     private void RegisterDriver(String email, String password) {
@@ -102,10 +109,12 @@ public class DriverLoginActivity extends AppCompatActivity {
                                 if(task.isSuccessful())
                                 {
                                     Toast.makeText(DriverLoginActivity.this, "Driver Register Successfull", Toast.LENGTH_SHORT).show();
+                                    processbar.dismiss();
                                 }
                                 else {
 
                                     Toast.makeText(DriverLoginActivity.this, "Driver Register Unsuccessfull", Toast.LENGTH_SHORT).show();
+                                    processbar.dismiss();
                                 }
                         }
                     });
