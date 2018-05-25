@@ -76,7 +76,7 @@ public class DriverLoginActivity extends AppCompatActivity {
         Driverlogbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
 
