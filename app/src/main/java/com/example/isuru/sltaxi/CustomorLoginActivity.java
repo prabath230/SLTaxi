@@ -72,6 +72,58 @@ public class CustomorLoginActivity extends AppCompatActivity {
                 RegisterCustomer(email,password);
             }
         });
+         customorlogbtn.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
+                 String email = customeremail.getText().toString();
+                 String password =customorpw.getText().toString();
+
+                 LoginCustemor(email,password);
+             }
+         });
+
+    }
+
+    private void LoginCustemor(String email, String password) {
+
+
+        if (TextUtils.isEmpty(email))
+        {
+            Toast.makeText(CustomorLoginActivity.this, "Please Enter Your Email..",Toast.LENGTH_SHORT).show();
+
+        }
+        if (TextUtils.isEmpty(password))
+        {
+            Toast.makeText(CustomorLoginActivity.this, "Please Enter Your Password..",Toast.LENGTH_SHORT).show();
+
+        }
+        else {
+
+            processbar.setTitle("Customer Login");
+            processbar.setMessage("Please Wait we are Login You..");
+            processbar.show();
+
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task)
+
+                        {
+                            if(task.isSuccessful())
+                            {
+                                Toast.makeText(CustomorLoginActivity.this, "Customer Login is Successfull", Toast.LENGTH_SHORT).show();
+                                processbar.dismiss();
+                            }
+                            else {
+
+                                Toast.makeText(CustomorLoginActivity.this, "Customer Login is Unsuccessfull", Toast.LENGTH_SHORT).show();
+                                processbar.dismiss();
+                            }
+                        }
+                    });
+
+        }
     }
 
     private void RegisterCustomer(String email, String password) {

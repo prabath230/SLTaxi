@@ -1,6 +1,7 @@
 package com.example.isuru.sltaxi;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -75,10 +76,62 @@ public class DriverLoginActivity extends AppCompatActivity {
 
         Driverlogbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
 
+            {
+                String email = driveremail.getText().toString();
+                String password =driverpw.getText().toString();
+
+                LoginDeriver(email,password);
             }
         });
+
+    }
+
+    private void LoginDeriver(String email, String password) {
+
+
+        if (TextUtils.isEmpty(email))
+        {
+            Toast.makeText(DriverLoginActivity.this, "Please Enter Your Email..",Toast.LENGTH_SHORT).show();
+
+        }
+        if (TextUtils.isEmpty(password))
+        {
+            Toast.makeText(DriverLoginActivity.this, "Please Enter Your Password..",Toast.LENGTH_SHORT).show();
+
+        }
+        else {
+
+            processbar.setTitle("Driver Login");
+            processbar.setMessage("Please Wait we are Login in You..");
+            processbar.show();
+
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task)
+
+                        {
+                            if(task.isSuccessful())
+                            {
+                                Toast.makeText(DriverLoginActivity.this, "Driver Login is Successfull", Toast.LENGTH_SHORT).show();
+                                processbar.dismiss();
+
+                                Intent DriverIntent = new Intent(DriverLoginActivity.this ,DriverMapActivity.class);
+                                startActivity(DriverIntent);
+                            }
+                            else {
+
+                                Toast.makeText(DriverLoginActivity.this, "Driver Login is Unsuccessfull", Toast.LENGTH_SHORT).show();
+                                processbar.dismiss();
+                            }
+                        }
+                    });
+
+        }
+
+
 
     }
 
@@ -97,10 +150,10 @@ public class DriverLoginActivity extends AppCompatActivity {
         else {
 
             processbar.setTitle("Driver Registration");
-            processbar.setMessage("Please Wait we are Registering You..");
+            processbar.setMessage("Please Wait we are Registration You..");
             processbar.show();
 
-            mAuth.createUserWithEmailAndPassword(email, password)
+            mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task)
@@ -108,12 +161,15 @@ public class DriverLoginActivity extends AppCompatActivity {
                         {
                                 if(task.isSuccessful())
                                 {
-                                    Toast.makeText(DriverLoginActivity.this, "Driver Register Successfull", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(DriverLoginActivity.this, "Driver Registration in Successfull", Toast.LENGTH_SHORT).show();
                                     processbar.dismiss();
+
+                                    Intent DriverIntent = new Intent(DriverLoginActivity.this ,DriverMapActivity.class);
+                                    startActivity(DriverIntent);
                                 }
                                 else {
 
-                                    Toast.makeText(DriverLoginActivity.this, "Driver Register Unsuccessfull", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(DriverLoginActivity.this, "Driver Registration Unsuccessfull", Toast.LENGTH_SHORT).show();
                                     processbar.dismiss();
                                 }
                         }
